@@ -5,7 +5,12 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        'space-grotesk': ['var(--font-space-grotesk)', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
   darkMode: 'class',

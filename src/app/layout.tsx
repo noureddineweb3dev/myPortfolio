@@ -1,11 +1,28 @@
 import Navbar from '@/components/layout/Navbar';
 import './globals.css';
 import ThemeProvider from '@/components/providers/ThemeProvider';
+import { Poppins, Space_Grotesk } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
+});
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className="min-h-full  dark:bg-gray-950">
-      <body className="min-h-screen text-gray-900 dark:text-gray-100">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`min-h-full dark:bg-gray-950 ${poppins.variable} ${spaceGrotesk.variable}`}
+    >
+      <body className="min-h-screen text-gray-900 dark:text-gray-100 font-poppins">
         <ThemeProvider>
           <Navbar />
           <main className="min-h-screen">{children}</main>

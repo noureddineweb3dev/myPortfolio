@@ -1,8 +1,10 @@
+import Hero from '@/components/sections/Hero';
+
 function HomePage() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold">Hi, I’m Noureddine 👋</h1>
-    </main>
+    <>
+      <Hero />
+    </>
   );
 }
 export default HomePage;
