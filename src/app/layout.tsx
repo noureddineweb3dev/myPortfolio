@@ -1,33 +1,19 @@
 import Navbar from '@/components/layout/Navbar';
 import './globals.css';
 import ThemeProvider from '@/components/providers/ThemeProvider';
-import { Poppins, Space_Grotesk } from 'next/font/google';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-poppins',
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-space-grotesk',
-});
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      lang="en"
       suppressHydrationWarning
-      className={`h-screen overflow-hidden dark:bg-gray-950 ${poppins.variable} ${spaceGrotesk.variable}`}
+      className=" light:bg-white light:text-gray-900 text-gray-900 dark:bg-gray-950 dark:text-gray-100"
     >
-      <body className="h-screen overflow-y-auto text-gray-900 dark:text-gray-100 font-poppins">
+      <body className="min-h-screen ">
         <ThemeProvider>
           <Navbar />
-          <main>{children}</main>
+          <main className="min-h-screen">{children}</main>
 
-          <footer className="p-4 text-center text-gray-500">© 2025 Noureddine</footer>
+          <footer className="p-4 text-center ">© 2025 Noureddine</footer>
         </ThemeProvider>
       </body>
     </html>

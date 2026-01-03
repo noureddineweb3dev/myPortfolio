@@ -2,7 +2,7 @@ import WaterSurface from '@/components/effects/WaterSurface';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-linear-to-b from-slate-950 via-blue-950 to-slate-900">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-blue-950 to-slate-900">
       <WaterSurface />
 
       <div className="relative z-10 flex items-center justify-center min-h-screen">
@@ -13,19 +13,19 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="text-6xl sm:text-7xl font-space-grotesk font-bold leading-tight tracking-tight bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl sm:text-7xl font-bold leading-tight bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
             Crafting Exceptional
             <span className="block">Digital Experiences</span>
           </h1>
 
-          <p className="mt-8 text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-poppins font-light">
+          <p className="mt-8 text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
             I&apos;m a creative frontend developer passionate about building beautiful, interactive
             experiences that engage and delight users. Specializing in animations, motion design,
             and performance optimization.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <button className="px-8 py-3 font-semibold text-white bg-linear-to-r from-cyan-500 to-blue-500 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+            <button className="px-8 py-3 font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
               View My Work
             </button>
             <button className="px-8 py-3 font-semibold text-cyan-300 border-2 border-cyan-500/50 rounded-lg hover:border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300">
