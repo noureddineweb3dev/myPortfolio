@@ -20,12 +20,12 @@ function Layout({ children }: { children: React.ReactNode }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`min-h-full dark:bg-gray-950 ${poppins.variable} ${spaceGrotesk.variable}`}
+      className={`h-screen overflow-hidden dark:bg-gray-950 ${poppins.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="min-h-screen text-gray-900 dark:text-gray-100 font-poppins">
+      <body className="h-screen overflow-y-auto text-gray-900 dark:text-gray-100 font-poppins">
         <ThemeProvider>
           <Navbar />
-          <main className="min-h-screen">{children}</main>
+          <main>{children}</main>
 
           <footer className="p-4 text-center text-gray-500">© 2025 Noureddine</footer>
         </ThemeProvider>

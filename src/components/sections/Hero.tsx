@@ -2,7 +2,7 @@ import WaterSurface from '@/components/effects/WaterSurface';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-blue-950 to-slate-900">
+    <section className="relative min-h-screen overflow-hidden bg-linear-to-b from-slate-950 via-blue-950 to-slate-900">
       <WaterSurface />
 
       <div className="relative z-10 flex items-center justify-center min-h-screen">
@@ -25,7 +25,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <button className="px-8 py-3 font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+            <button className="px-8 py-3 font-semibold text-white bg-linear-to-r from-cyan-500 to-blue-500 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
               View My Work
             </button>
             <button className="px-8 py-3 font-semibold text-cyan-300 border-2 border-cyan-500/50 rounded-lg hover:border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300">
