@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ThemeToggle from '../ui/ThemeToggle';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -16,7 +17,7 @@ function Navbar() {
 
   return (
     <header className="border-b border-gray-800">
-      <nav className="mx-auto flex max-w-6xl items-center gap-6 p-4">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between p-4">
         <span className="font-bold">Noureddine</span>
 
         <ul className="flex gap-4">
@@ -37,6 +38,7 @@ function Navbar() {
             );
           })}
         </ul>
+        <ThemeToggle />
       </nav>
     </header>
   );
