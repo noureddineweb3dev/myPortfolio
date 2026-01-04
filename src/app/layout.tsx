@@ -4,11 +4,8 @@ import ThemeProvider from '@/components/providers/ThemeProvider';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      suppressHydrationWarning
-      className=" light:bg-white light:text-gray-900 text-gray-900 dark:bg-gray-950 dark:text-gray-100"
-    >
-      <body className="min-h-screen ">
+    <html suppressHydrationWarning className=" scroll-smooth " lang="en">
+      <body className="min-h-screen bg-linear-to-b from-slate-950 via-blue-950 to-slate-900 ">
         <ThemeProvider>
           <Navbar />
           <main className="min-h-screen">{children}</main>
