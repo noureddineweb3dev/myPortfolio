@@ -86,7 +86,7 @@ export default function Footer() {
                       transition: { delay: 0.25 },
                     })}
               >
-                Noureddine
+                Built with ❤️ by Noureddine
               </motion.span>
             </div>
           </motion.a>
