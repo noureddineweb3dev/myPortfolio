@@ -1,5 +1,6 @@
-import Navbar from '@/components/layout/Navbar';
 import './globals.css';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import ThemeProvider from '@/components/providers/ThemeProvider';
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -10,7 +11,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <Navbar />
           <main className="min-h-screen">{children}</main>
 
-          <footer className="p-4 text-center ">© 2025 Noureddine</footer>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
