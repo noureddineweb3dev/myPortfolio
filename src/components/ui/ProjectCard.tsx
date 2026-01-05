@@ -14,9 +14,11 @@ type Props = {
     tags: string[];
   };
   index: number;
+  onViewAction?: () => void;
 };
 
-export default function ProjectCard({ project, index }: Props) {
+export default function ProjectCard({ project, index, onViewAction }: Props) {
+  const handleView = onViewAction || (() => {});
   const ref = useRef<HTMLDivElement>(null);
   const isEven = index % 2 === 0;
 
@@ -48,7 +50,7 @@ export default function ProjectCard({ project, index }: Props) {
           className="relative h-full w-full"
         >
           <Image src={project.image} alt={project.title} fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/70" />
+          <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/40 to-black/70" />
         </motion.div>
       </div>
 
@@ -76,12 +78,13 @@ export default function ProjectCard({ project, index }: Props) {
           ))}
         </div>
 
-        <Link
-          href={`/projects/${project.slug}`}
+        <button
+          type="button"
+          onClick={handleView}
           className="mt-10 inline-flex items-center gap-3 text-lg font-semibold text-cyan-300 hover:gap-4 transition-all"
         >
           View case study <span>→</span>
-        </Link>
+        </button>
       </div>
     </motion.article>
   );

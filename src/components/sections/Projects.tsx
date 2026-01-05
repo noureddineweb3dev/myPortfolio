@@ -1,10 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
+
 import ProjectCard from '@/components/ui/ProjectCard';
+import ProjectModal from '@/components/ui/ProjectModal';
 import { projects } from '@/data/projects';
+import { useState } from 'react';
+
+type Project = {
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+};
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-48">
       {/* HEADER */}
@@ -39,9 +52,19 @@ export default function Projects() {
       {/* PROJECT LIST */}
       <div className="space-y-40">
         {projects.map((project, index) => (
-          <ProjectCard key={project.slug} project={project} index={index} />
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            index={index}
+            onViewAction={() => setSelectedProject(project)}
+          />
         ))}
       </div>
+
+      {/* MODAL OVERLAY */}
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </section>
   );
 }
